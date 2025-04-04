@@ -289,7 +289,7 @@
   width: 100%;
   height: 100vh;
   background: url(../images/index/bg_sec4.jpg) no-repeat center/cover;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #main #con3 .inner {
   max-width: 1269px;
@@ -315,39 +315,41 @@
   font-family: inherit;
 }
 #main #con3 .inner .slide_area {
-  width: 100%;
+  width: 84.375vw;
   height: 425px;
   margin-top: 50px;
   position: relative;
+  overflow-x: hidden;
 }
-#main #con3 .inner .slide_area ul {
+#main #con3 .inner .slide_area ul.slide_list {
   display: flex;
   gap: 24px;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  transition: 1s;
 }
-#main #con3 .inner .slide_area ul li {
+#main #con3 .inner .slide_area ul.slide_list li {
   width: 518px;
   height: 100%;
 }
-#main #con3 .inner .slide_area ul li figure .content {
+#main #con3 .inner .slide_area ul.slide_list li figure .content {
   border-radius: 24px;
   overflow: hidden;
   position: relative;
 }
-#main #con3 .inner .slide_area ul li figure .content:hover .txtBox {
+#main #con3 .inner .slide_area ul.slide_list li figure .content:hover .txtBox {
   opacity: 1;
 }
-#main #con3 .inner .slide_area ul li figure .content:hover img {
+#main #con3 .inner .slide_area ul.slide_list li figure .content:hover img {
   opacity: 0;
 }
-#main #con3 .inner .slide_area ul li figure .content img {
+#main #con3 .inner .slide_area ul.slide_list li figure .content img {
   opacity: 1;
   transition: opacity 0.5s;
 }
-#main #con3 .inner .slide_area ul li figure .content .txtBox {
+#main #con3 .inner .slide_area ul.slide_list li figure .content .txtBox {
   width: 100%;
   height: 100%;
   padding: 136px 50px 0;
@@ -359,7 +361,7 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
-#main #con3 .inner .slide_area ul li figure .content .txtBox span {
+#main #con3 .inner .slide_area ul.slide_list li figure .content .txtBox span {
   display: -webkit-box;
   line-height: 38px;
   color: var(--fontBlack_444);
@@ -370,19 +372,19 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-#main #con3 .inner .slide_area ul li figure figcaption {
+#main #con3 .inner .slide_area ul.slide_list li figure figcaption {
   height: 48px;
   margin-top: 25px;
   margin-left: 50px;
 }
-#main #con3 .inner .slide_area ul li figure figcaption::before {
+#main #con3 .inner .slide_area ul.slide_list li figure figcaption::before {
   content: "";
   display: inline-block;
   width: 48px;
   height: 48px;
   background: url(../images/index/icon_grade_blue.png) no-repeat center/cover;
 }
-#main #con3 .inner .slide_area ul li figure figcaption span {
+#main #con3 .inner .slide_area ul.slide_list li figure figcaption span {
   font-size: 18px;
   font-weight: 500;
   line-height: 48px;

@@ -70,22 +70,22 @@ function currentScroll() {
 
     if (currentScrollY > con1Top && currentScrollY <= con2Top) {
       /* con1 영역 시작 */
-      console.log("con1 도착");
+      // console.log("con1 도착");
     } else if (currentScrollY > con2Top && currentScrollY <= con3Top) {
       /* con2 영역 시작 */
-      console.log("con2 도착");
-    } else if (currentScrollY > con3Top && currentScrollY <= con4Top) {
+      // console.log("con2 도착");
+    }
+     else if (currentScrollY > con3Top && currentScrollY <= con4Top) {
       /* con3 영역 시작 */
-      console.log("con3 도착");
+      // console.log("con3 도착");
     } else if (currentScrollY > con4Top && currentScrollY <= footerTop) {
       /* con4 영역 시작 */
-      console.log("con4 도착");
+      // console.log("con4 도착");
     }
 
     let bottom = currentScrollY + viewpointHeight;
 
     if (bottom >= footerTop) {
-      // alert("도착")
       topButtonElem.classList.add("topBtn");
     } else {
       topButtonElem.classList.remove("topBtn");
@@ -93,6 +93,24 @@ function currentScroll() {
   });
 }
 currentScroll();
+
+/* con3 슬라이드 이벤트 */
+
+function con3Slide(){
+  // 변화된 요소를 업데이트 해야 해서 함수 내부에 선언
+  const con3SlideElem = con3Elem.querySelector(".slide_list");
+  const con3SlideLists = con3SlideElem.querySelectorAll("li");
+  const firstList = con3SlideLists[0].cloneNode(true);
+  con3SlideElem.appendChild(firstList)
+  con3SlideElem.style.transition = "1s";
+  con3SlideElem.style.marginLeft = "-542px";
+  setTimeout(function(){
+    con3SlideLists[0].remove();
+    con3SlideElem.style.transition = "0s";
+    con3SlideElem.style.marginLeft = "0px";
+  },1000);
+}
+setInterval(con3Slide, 4000); //첫번째 슬라이드를 복사후 없애고 전체 슬라이드 마지막에 만들기
 
 /* top 버튼 스크립트 ################## */
 topButtonElem.addEventListener("click", function () {

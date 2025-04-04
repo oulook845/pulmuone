@@ -301,7 +301,7 @@
     width: 100%;
     height: 100vh;
     background: url(../images/index/bg_sec4.jpg) no-repeat center / cover;
-    overflow: hidden;
+    overflow-x: hidden;
     .inner {
       max-width: 1269px;
       display: flex;
@@ -325,17 +325,20 @@
         }
       }
       .slide_area {
-        width: 100%;
+        // width: 100%;
+        width: 84.3750vw;
         height: 425px;
         margin-top: 50px;
         position: relative;
-        ul {
+        overflow-x: hidden;
+        ul.slide_list {
           display: flex;
           gap: 24px;
           height: 100%;
           position: absolute;
           left: 0;
           top: 0;
+          transition: 1s;
           li {
             width: 518px;
             height: 100%;
