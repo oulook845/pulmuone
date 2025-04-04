@@ -1,7 +1,7 @@
-@import url(../css/reset.css);
-@import url(../css/font.css);
-@import url(../css/common.css);
-@import url(../css/component.css);
+@import url(./reset.css);
+@import url(./font.css);
+@import url(./common.css);
+@import url(./component.css);
 
 :root{
     --mainColor_blue : #50a4e5;
