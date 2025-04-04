@@ -1,6 +1,5 @@
 import { getScrollData } from "./commonScroll.js";
 
-const viewpointHeight = window.innerHeight;
 
 /* dom 요소 */
 const headerElem = document.getElementById("header"),
@@ -61,11 +60,9 @@ function currentScroll() {
     if (currentScrollY <= 0) {
       /* 페이지 맨 상단 */
       headerFuntion(false);
-      topButtonElem.style.opacity = 0;
     } else if (currentScrollY > 0) {
       /* 페이지 상단이 아닐 때 */
       headerFuntion(true);
-      topButtonElem.style.opacity = 1;
     }
 
     if (currentScrollY > con1Top && currentScrollY <= con2Top) {
@@ -81,14 +78,6 @@ function currentScroll() {
     } else if (currentScrollY > con4Top && currentScrollY <= footerTop) {
       /* con4 영역 시작 */
       // console.log("con4 도착");
-    }
-
-    let bottom = currentScrollY + viewpointHeight;
-
-    if (bottom >= footerTop) {
-      topButtonElem.classList.add("topBtn");
-    } else {
-      topButtonElem.classList.remove("topBtn");
     }
   });
 }
@@ -112,10 +101,4 @@ function con3Slide(){
 }
 setInterval(con3Slide, 4000); //첫번째 슬라이드를 복사후 없애고 전체 슬라이드 마지막에 만들기
 
-/* top 버튼 스크립트 ################## */
-topButtonElem.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+

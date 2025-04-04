@@ -148,6 +148,62 @@ body {
 }
 #header .allMenu_area {
   display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+#header .allMenu_area .allMenu_wrap {
+  width: 100%;
+  color: var(--fontBlack_222);
+  background-color: #fff;
+  padding: 120px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#header .allMenu_area .allMenu_wrap ul.allMenu_list {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+#header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu {
+  width: 212px;
+}
+#header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu > a {
+  display: inline-block;
+  font-size: 28px;
+  font-family: "Lohas_b";
+  line-height: 38px;
+  letter-spacing: -1.4px;
+  padding-bottom: 40px;
+}
+#header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu li {
+  padding: 8px 0;
+}
+#header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu li a {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--fontBlack_666);
+  transition: 0.2s;
+}
+#header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu li a:hover {
+  color: var(--mainColor_blue);
+}
+#header .allMenu_area button.closeBtn {
+  width: 50px;
+  height: 50px;
+  background: url(../images/common/btn_close_allmenu.png) no-repeat center;
+  cursor: pointer;
+  position: absolute;
+  right: 23px;
+  top: 20px;
+  z-index: 9;
 }
 
 /* #footer */
@@ -376,13 +432,13 @@ body {
   background-position: center;
 }
 #footer .sns_area ul li a.insta {
-  background-image: url(../images/common/icon_sns_insta.png);
+  background-image: url(../../images/common/icon_sns_insta.png);
 }
 #footer .sns_area ul li a.youtube {
-  background-image: url(../images/common/icon_sns_ytb.png);
+  background-image: url(../../images/common/icon_sns_ytb.png);
 }
 #footer .sns_area ul li a.naverBlog {
-  background-image: url(../images/common/icon_sns_blog.png);
+  background-image: url(../../images/common/icon_sns_blog.png);
 }
 
 .inner {
