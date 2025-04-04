@@ -1,0 +1,459 @@
+#main #visual {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#main #visual .video_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#main #visual .video_bg video.visual_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main #con1 {
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+  background: url(../images/index/bg_sec2.jpg) no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+#main #con1 h2.title {
+  font-size: 48px;
+  font-weight: 600;
+  font-family: "Lohas_b";
+  text-align: center;
+  color: var(--fontBlack_222);
+}
+#main #con1 .content {
+  max-width: 1272px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  gap: 24px;
+}
+#main #con1 .content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#main #con1 .content .product_01 {
+  width: 948px;
+  height: 450px;
+  border-radius: 24px;
+  padding: 96px 0 0 90px;
+  background: url(../images/index/open_img_event.jpg) no-repeat center/cover;
+}
+#main #con1 .content .product_01 h3.tit {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: "Lohas_b";
+}
+#main #con1 .content .product_01 p.desc {
+  margin-top: 10px;
+  color: var(--fontBlack_555);
+}
+#main #con1 .content .product_02 {
+  width: 300px;
+  height: 450px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+#main #con1 .content .product_02 .waveBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #a7d1f2;
+}
+#main #con1 .content .product_02 .waveBox .wave {
+  padding: 400px;
+  border-radius: 43%;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -400px;
+}
+#main #con1 .content .product_02 .waveBox .wave.wave1 {
+  background: #1578c4;
+  opacity: 0.6;
+  animation: waveRotate 20s infinite linear;
+  transform-origin: 50% 48%;
+}
+#main #con1 .content .product_02 .waveBox .wave.wave2 {
+  background: #5ba8f0;
+  opacity: 0.5;
+  animation: waveRotate 17s infinite linear;
+}
+#main #con1 .content .product_02 .waveBox .wave.wave3 {
+  background: #50a4e5;
+  opacity: 0.4;
+  animation: waveRotate 15s infinite linear;
+}
+@keyframes waveRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#main #con1 .content .product_02 .txtBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: var(--fontWhite);
+  text-align: center;
+}
+#main #con1 .content .product_02 .txtBox::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  display: block;
+  border-radius: 50%;
+  margin: 50px auto 24px;
+  background-color: rgba(255, 255, 255, 0.12);
+  background-image: url(../images/index/open_icon_waterpack.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#main #con1 .content .product_02 .txtBox .tit {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Lohas_m";
+  line-height: 38px;
+}
+#main #con1 .content .product_02 .txtBox .desc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  position: relative;
+}
+#main #con1 .content .product_02 .txtBox .desc::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+  margin: 16px auto;
+}
+#main #con2 {
+  width: 100%;
+  background: var(--bgColor_beige);
+}
+#main #con2 .inner {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding-top: 32.5vh;
+}
+#main #con2 .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#main #con2 .inner div.txt_area {
+  max-width: 1272px;
+  height: 67.5vh;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 32.5vh;
+  margin: 0 auto;
+}
+#main #con2 .inner div.txt_area .title {
+  font-size: 48px;
+  font-weight: 600;
+  font-family: "Lohas_b";
+  line-height: 58px;
+}
+#main #con2 .inner ul.img_area {
+  width: 732px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  float: right;
+  padding-top: 450px;
+  padding-bottom: 20vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#main #con2 .inner ul.img_area li {
+  width: 354px;
+  height: 430px;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+#main #con2 .inner ul.img_area li:nth-child(odd) {
+  margin-top: -250px;
+}
+#main #con2 .inner ul.img_area li:hover .imgBox {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#main #con2 .inner ul.img_area li:hover .txtBox {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+#main #con2 .inner ul.img_area li .imgBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  position: relative;
+}
+#main #con2 .inner ul.img_area li .imgBox::after {
+  content: "";
+  height: 40%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+}
+#main #con2 .inner ul.img_area li .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+#main #con2 .inner ul.img_area li .imgBox em {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--fontWhite);
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+  word-break: keep-all;
+}
+#main #con2 .inner ul.img_area li .txtBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: var(--fontWhite);
+  padding: 0 50px;
+  background-color: var(--mainColor_beige);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+}
+#main #con2 .inner ul.img_area li .txtBox::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-top: 50px;
+  background: url(../images/common/icon_magazine_more.png) no-repeat center;
+}
+#main #con2 .inner ul.img_area li .txtBox .tit {
+  font-size: 28px;
+  font-family: "Lohas_m";
+  line-height: 38px;
+  letter-spacing: -1.4px;
+}
+#main #con2 .inner ul.img_area li .txtBox .desc {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 12px;
+  opacity: 0.85;
+}
+#main #con3 {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/index/bg_sec4.jpg) no-repeat center/cover;
+  overflow: hidden;
+}
+#main #con3 .inner {
+  max-width: 1269px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+#main #con3 .inner .txt_area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+#main #con3 .inner .txt_area .title {
+  font-size: 48px;
+  font-family: "Lohas_b";
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -1.44px;
+}
+#main #con3 .inner .txt_area .title span {
+  font-family: inherit;
+}
+#main #con3 .inner .slide_area {
+  width: 100%;
+  height: 425px;
+  margin-top: 50px;
+  position: relative;
+}
+#main #con3 .inner .slide_area ul {
+  display: flex;
+  gap: 24px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#main #con3 .inner .slide_area ul li {
+  width: 518px;
+  height: 100%;
+}
+#main #con3 .inner .slide_area ul li figure .content {
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+#main #con3 .inner .slide_area ul li figure .content:hover .txtBox {
+  opacity: 1;
+}
+#main #con3 .inner .slide_area ul li figure .content:hover img {
+  opacity: 0;
+}
+#main #con3 .inner .slide_area ul li figure .content img {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+#main #con3 .inner .slide_area ul li figure .content .txtBox {
+  width: 100%;
+  height: 100%;
+  padding: 136px 50px 0;
+  background: var(--bgColor_gray_f5) url(../../images/index/bg_review_list.png) no-repeat 52px 74px/42px 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#main #con3 .inner .slide_area ul li figure .content .txtBox span {
+  display: -webkit-box;
+  line-height: 38px;
+  color: var(--fontBlack_444);
+  font-size: 28px;
+  font-family: "Lohas_m";
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+#main #con3 .inner .slide_area ul li figure figcaption {
+  height: 48px;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+#main #con3 .inner .slide_area ul li figure figcaption::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url(../../images/index/icon_grade_blue.png) no-repeat center/cover;
+}
+#main #con3 .inner .slide_area ul li figure figcaption span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 48px;
+  margin-left: 14px;
+}
+#main #con4 {
+  width: 100%;
+  background-color: var(--bgColor_gray_f5);
+}
+#main #con4 .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 413px);
+  padding: 2.7778vh 0;
+}
+#main #con4 .inner .title {
+  color: var(--fontBlack_title);
+  font-family: "Lohas_b";
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -1.44px;
+  text-align: center;
+}
+#main #con4 .inner ul.csList {
+  display: flex;
+  justify-content: center;
+  gap: 132px;
+  margin-top: 50px;
+}
+#main #con4 .inner ul.csList li {
+  width: 192px;
+  height: 192px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+#main #con4 .inner ul.csList li:hover::before {
+  transform: scale(1.2);
+}
+#main #con4 .inner ul.csList li:nth-child(1)::before {
+  background-image: url(../../images/index/icon_cs_1.png);
+}
+#main #con4 .inner ul.csList li:nth-child(2)::before {
+  background-image: url(../../images/index/icon_cs_2.png);
+}
+#main #con4 .inner ul.csList li:nth-child(3)::before {
+  background-image: url(../../images/index/icon_cs_3.png);
+}
+#main #con4 .inner ul.csList li:nth-child(4)::before {
+  background-image: url(../../images/index/icon_cs_4.png);
+}
+#main #con4 .inner ul.csList li::before {
+  content: "";
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.5s;
+}
+#main #con4 .inner ul.csList li span {
+  display: block;
+  color: var(--fontBlack_666);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+}

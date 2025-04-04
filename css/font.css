@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/* Noto Sans KR */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap");
+/*
+font-weight: 300; Light
+font-weight: 400; Regular
+font-weight: 500; Medium
+font-weight: 700; Bold
+*/
+
+/* PulmuoneLOHAS */
+@font-face {
+  font-family: "Lohas_b";
+  src: url(../font/PulmuoneLOHASBold.woff) format("woff"), url(../font/PulmuoneLOHASBold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Lohas_m";
+  src: url(../font/PulmuoneLOHASMedium.woff) format("woff"), url(../font/PulmuoneLOHASMedium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Lohas_l";
+  src: url(../font/PulmuoneLOHASLight.woff) format("woff"), url(../font/PulmuoneLOHASLight.otf) format("opentype");
+}

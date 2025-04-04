@@ -1,0 +1,17 @@
+@import url(../css/reset.css);
+@import url(../css/font.css);
+@import url(../css/common.css);
+@import url(../css/component.css);
+
+:root{
+    --mainColor_blue : #50a4e5;
+    --fontBlack_title : #222;
+    --mainColor_beige : rgba(206, 171, 99, 0.85);
+    --fontBlack_444 : #444;
+    --fontBlack_555 : #555;
+    --fontBlack_666 : #666;
+    --fontWhite : #fff;
+    --bgColor_beige : rgba(206, 171, 99, 0.12);
+    --bgColor_gray_f5 : #f5f5f5;
+    --bgColor_ligthGray : rgba(178, 178, 178, 0.6);
+}
