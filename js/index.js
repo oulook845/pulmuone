@@ -1,4 +1,4 @@
-import { getScrollData } from "./CommonScroll.js";
+import { getScrollData } from "./commonScroll.js";
 
 const viewpointHeight = window.innerHeight;
 

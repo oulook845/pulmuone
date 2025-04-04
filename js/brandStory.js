@@ -1,4 +1,4 @@
-import { getScrollData } from "./CommonScroll.js";
+import { getScrollData } from "./commonScroll.js";
 
 /* dom 요소 */
 const headerElem = document.getElementById("header"),
