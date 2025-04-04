@@ -376,13 +376,13 @@ body {
   background-position: center;
 }
 #footer .sns_area ul li a.insta {
-  background-image: url(../../images/common/icon_sns_insta.png);
+  background-image: url(../images/common/icon_sns_insta.png);
 }
 #footer .sns_area ul li a.youtube {
-  background-image: url(../../images/common/icon_sns_ytb.png);
+  background-image: url(../images/common/icon_sns_ytb.png);
 }
 #footer .sns_area ul li a.naverBlog {
-  background-image: url(../../images/common/icon_sns_blog.png);
+  background-image: url(../images/common/icon_sns_blog.png);
 }
 
 .inner {
