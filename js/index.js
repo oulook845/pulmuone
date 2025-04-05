@@ -84,7 +84,6 @@ function currentScroll() {
 currentScroll();
 
 /* con3 슬라이드 이벤트 */
-
 function con3Slide(){
   // 변화된 요소를 업데이트 해야 해서 함수 내부에 선언
   const con3SlideElem = con3Elem.querySelector(".slide_list");

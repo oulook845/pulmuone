@@ -152,7 +152,6 @@
 #main #con2 {
   width: 100%;
   background: var(--bgColor_beige);
-  overflow: hidden;
 }
 #main #con2 .inner {
   max-width: 1272px;
