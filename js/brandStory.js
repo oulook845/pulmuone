@@ -51,8 +51,8 @@ window.addEventListener("scroll", function () {
       scrollIcon.style.opacity = 0;
     }
   }
-   else if (currentScrollY >= con1Top && currentScrollY < con2Top) {
-    /* con1 영역 스크롤 이벤트 */
+  else if (currentScrollY >= con1Top && currentScrollY < con2Top) {
+     /* con1 영역 스크롤 이벤트 */
     if ((currentScrollY >= con1Top && currentScrollY < con1Top + conPoint_01) || currentScrollY < con1Top) {
       con1Scroll("txt01");
       con1Bg.style.backgroundPosition = "center 0%";
@@ -83,15 +83,15 @@ window.addEventListener("scroll", function () {
     /* con3 영역 스크롤 이벤트 */
     if ((currentScrollY >= con3Top && currentScrollY < con3Top + conPoint_01)) {
       con3Scroll("txt01");
-      con3Bg.style.backgroundImage = "url(../images/brand/bg_brand_sec4_1.jpg)";
+      con3Bg.style.backgroundImage = "url(./images/brand/bg_brand_sec4_1.jpg)";
     }
      else if (currentScrollY >= con3Top + conPoint_01 && currentScrollY < con3Top + conPoint_02) {
       con3Scroll("txt02");
-      con3Bg.style.backgroundImage = "url(../images/brand/bg_brand_sec4_2.jpg)";
+      con3Bg.style.backgroundImage = "url(./images/brand/bg_brand_sec4_2.jpg)";
     }
      else if (currentScrollY >= con3Top + conPoint_02 && viewBottom < con4Top) {
       con3Scroll("txt03");
-      con3Bg.style.backgroundImage = "url(../images/brand/bg_brand_sec4_3.jpg)";
+      con3Bg.style.backgroundImage = "url(./images/brand/bg_brand_sec4_3.jpg)";
     }
   }
    else if (currentScrollY >= con4Top && currentScrollY < con5Top) {
