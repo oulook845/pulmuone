@@ -69,17 +69,19 @@ window.addEventListener("scroll", function () {
     if ((currentScrollY >= con2Top && currentScrollY < con2Top + conPoint_01) || currentScrollY < con2Top) {
       con2Scroll("txt01");
       con2Bg.style.backgroundPosition = "center 100%";
-    } else if (currentScrollY >= con2Top + conPoint_01 && currentScrollY < con2Top + conPoint_02) {
+    }
+     else if (currentScrollY >= con2Top + conPoint_01 && currentScrollY < con2Top + conPoint_02) {
       con2Scroll("txt02");
       con2Bg.style.backgroundPosition = "center 70%";
-    } else if (currentScrollY >= con2Top + conPoint_02 && viewBottom < con3Top) {
+    }
+     else if (currentScrollY >= con2Top + conPoint_02 && viewBottom < con3Top) {
       con2Scroll("txt03");
       con2Bg.style.backgroundPosition = "center 26%";
     }
   }
    else if (currentScrollY >= con3Top && currentScrollY < con4Top) {
     /* con3 영역 스크롤 이벤트 */
-    if ((currentScrollY >= con3Top && currentScrollY < con3Top + conPoint_01) || currentScrollY < con3Top) {
+    if ((currentScrollY >= con3Top && currentScrollY < con3Top + conPoint_01)) {
       con3Scroll("txt01");
       con3Bg.style.backgroundImage = "url(../images/brand/bg_brand_sec4_1.jpg)";
     }

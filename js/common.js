@@ -1,6 +1,5 @@
 import { getScrollData } from "./commonScroll.js";
 
-
 const html = document.querySelector("html");
 
 /* 링크가 없는 a태그 클릭시 동작 없음 */
