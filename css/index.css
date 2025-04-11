@@ -318,7 +318,7 @@
   height: 425px;
   margin-top: 50px;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 #main #con3 .inner .slide_area ul.slide_list {
   display: flex;
