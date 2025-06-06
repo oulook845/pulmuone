@@ -1,3 +1,9 @@
+@import "./_breakpoint";
+/* 
+  @include tablet(): 958px;
+  @include mobile(): 596px;
+*/
+
 #main {
   #visual {
     width: 100%;
@@ -9,9 +15,12 @@
       // height: calc(100% + 350px);
       height: 100%;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0%;
+      left: 0%;
+      @include tablet() {
+        display: none;
+      }
+      // transform: translate(-50%, -50%);
       // iframe {
       //   width: 100%;
       //   height: 100%;
@@ -24,6 +33,40 @@
         object-fit: cover;
       }
     }
+    .img_bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+      ul.bgSlide {
+        width: 100%;
+        height: 100%;
+        li {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          transition: opacity 1s;
+          &:nth-child(1) {
+            background-image: url(../images/index/m_img_visual_slider_1.jpg);
+            opacity: 1;
+          }
+          &:nth-child(2) {
+            background-image: url(../images/index/m_img_visual_slider_2.jpg);
+          }
+        }
+      }
+      @include tablet() {
+        display: block;
+      }
+    }
   }
   #con1 {
     width: 100%;
@@ -34,6 +77,11 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    @include tablet() {
+      height: auto;
+      padding-top: 58px;
+      padding-bottom: 28px;
+    }
     h2.title {
       font-size: 48px;
       font-weight: 600;
@@ -42,12 +90,15 @@
       color: var(--fontBlack_222);
     }
     .content {
+      width: 100%;
       max-width: 1272px;
       margin: 0 auto;
       margin-top: 50px;
       display: flex;
-      // flex-wrap: wrap;
       gap: 24px;
+      @include tablet() {
+        flex-direction: column;
+      }
       &::after {
         content: "";
         display: block;
@@ -60,6 +111,14 @@
         padding: 96px 0 0 90px;
         background: url(../images/index/open_img_event.jpg) no-repeat center / cover;
         // float: left;
+        @include tablet() {
+          width: 100%;
+          height: 700px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-image: url(../images/index/m_open_img_event.jpg);
+        }
         h3.tit {
           font-size: 36px;
           font-weight: 600;
@@ -69,6 +128,9 @@
           margin-top: 10px;
           color: var(--fontBlack_555);
         }
+        button.moreBtn {
+          width: fit-content;
+        }
       }
       .product_02 {
         width: 300px;
@@ -77,6 +139,10 @@
         // float: right;
         position: relative;
         overflow: hidden;
+        @include tablet() {
+          width: 100%;
+          height: 150px;
+        }
         .waveBox {
           width: 100%;
           height: 100%;
@@ -90,6 +156,12 @@
             left: 50%;
             margin-left: -400px;
             margin-top: -400px;
+            @include tablet() {
+              padding: calc(1400px / 2);
+              top: auto;
+              bottom: 30%;
+              margin-left: -700px;
+            }
             &.wave1 {
               background: #1578c4;
               opacity: 0.6;
@@ -123,6 +195,13 @@
           top: 0;
           color: var(--fontWhite);
           text-align: center;
+          @include tablet() {
+            width: fit-content;
+            text-align: left;
+            margin: 0 auto;
+            padding-top: 30px;
+            padding-left: 100px;
+          }
           &::before {
             content: "";
             width: 120px;
@@ -134,18 +213,33 @@
             background-image: url(../images/index/open_icon_waterpack.png);
             background-repeat: no-repeat;
             background-position: center;
+            background-size: cover;
+            @include tablet() {
+              width: 80px;
+              height: 80px;
+              margin: 0;
+              position: absolute;
+              left: 0;
+              top: 30px;
+            }
           }
           .tit {
             font-size: 28px;
             font-weight: 600;
             font-family: "Lohas_m";
             line-height: 38px;
+            br {
+              display: none;
+            }
           }
           .desc {
             font-size: 16px;
             font-weight: 300;
             line-height: 24px;
             position: relative;
+            @include tablet() {
+              font-size: 14px;
+            }
             &::before {
               content: "";
               display: block;
@@ -154,6 +248,9 @@
               background: #fff;
               border-radius: 1px;
               margin: 16px auto;
+              @include tablet() {
+                display: none;
+              }
             }
           }
         }
@@ -169,6 +266,9 @@
       max-width: 1272px;
       margin: 0 auto;
       padding-top: 32.5vh;
+      @include tablet() {
+        padding: 0;
+      }
       &::after {
         content: "";
         display: block;
@@ -181,13 +281,26 @@
         left: 0;
         right: 0;
         top: 32.5vh;
-        // bottom:auto;
         margin: 0 auto;
+        @include tablet() {
+          width: fit-content;
+          height: auto;
+          padding-top: 130px;
+          padding-bottom: 50px;
+          text-align: center;
+
+          background-color: #f9f5ec;
+          top: 0;
+          z-index: 9;
+        }
         .title {
           font-size: 48px;
           font-weight: 600;
           font-family: "Lohas_b";
           line-height: 58px;
+          @include tablet() {
+            font-size: 40px;
+          }
         }
       }
       ul.img_area {
@@ -201,6 +314,13 @@
         position: absolute;
         right: 0;
         top: 0;
+        @include tablet() {
+          width: fit-content;
+          flex-direction: column;
+          padding-top: calc(32.5vh + 80px);
+          left: 0;
+          margin: 0 auto;
+        }
         li {
           width: 354px;
           height: 430px;
@@ -208,8 +328,15 @@
           overflow: hidden;
           cursor: pointer;
           position: relative;
+          @include tablet() {
+            width: 242px;
+            height: 294px;
+          }
           &:nth-child(odd) {
             margin-top: -250px;
+            @include tablet() {
+              margin: 0;
+            }
           }
           &:hover .imgBox {
             opacity: 0;
@@ -285,6 +412,9 @@
               font-family: "Lohas_m";
               line-height: 38px;
               letter-spacing: -1.4px;
+              @include tablet() {
+                font-size: 18px;
+              }
             }
             .desc {
               font-size: 16px;
@@ -303,6 +433,9 @@
     height: 100vh;
     background: url(../images/index/bg_sec4.jpg) no-repeat center / cover;
     overflow-x: hidden;
+    @include tablet() {
+      background-image: url(../images/index/m_bg_sec4.jpg);
+    }
     .inner {
       max-width: 1269px;
       display: flex;
@@ -314,24 +447,42 @@
         display: flex;
         justify-content: space-between;
         align-items: end;
+        @include tablet() {
+          text-align: center;
+          flex-direction: column;
+          align-items: center;
+        }
         .title {
           font-size: 48px;
           font-family: "Lohas_b";
           font-weight: 400;
           line-height: 58px;
           letter-spacing: -1.44px;
+          @include tablet() {
+            font-size: 40px;
+          }
           span {
             font-family: inherit;
           }
         }
+        .moreBtn {
+          @include tablet() {
+            margin-top: 20px;
+            font-size: 12px;
+          }
+        }
       }
       .slide_area {
-        // width: 100%;
-        width: 84.3750vw;
+        width: 84.375vw;
         height: 425px;
+        margin: 0 auto;
         margin-top: 50px;
         position: relative;
         overflow: hidden;
+        @include tablet() {
+          width: 100%;
+          height: 695px;
+        }
         ul.slide_list {
           display: flex;
           gap: 24px;
@@ -340,9 +491,16 @@
           left: 0;
           top: 0;
           transition: 1s;
+          @include tablet() {
+            gap: 0;
+          }
           li {
             width: 518px;
             height: 100%;
+            @include tablet() {
+              width: 100vw;
+              padding: 0 20px;
+            }
             figure {
               .content {
                 border-radius: 24px;
@@ -357,13 +515,18 @@
                 img {
                   opacity: 1;
                   transition: opacity 0.5s;
+                  @include tablet() {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
                 }
                 .txtBox {
                   width: 100%;
                   height: 100%;
                   padding: 136px 50px 0;
-                  background: var(--bgColor_gray_f5) url(../images/index/bg_review_list.png) no-repeat 52px 74px /
-                    42px 30px;
+                  background: var(--bgColor_gray_f5) url(../images/index/bg_review_list.png) no-repeat 52px 74px / 42px
+                    30px;
                   position: absolute;
                   left: 0;
                   top: 0;
@@ -426,9 +589,16 @@
       }
       ul.csList {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 132px;
         margin-top: 50px;
+        @include tablet() {
+          max-width: 370px;
+          gap: 20px;
+          margin: 0 auto;
+          margin-top: 40px;
+        }
         li {
           width: 192px;
           height: 192px;
@@ -441,6 +611,11 @@
           border-radius: 50%;
           background-color: rgba(255, 255, 255, 0.7);
           cursor: pointer;
+          @include tablet() {
+            width: 150px;
+            height: 150px;
+            gap: 0;
+          }
           &:hover::before {
             transform: scale(1.2);
           }
@@ -472,6 +647,9 @@
             font-size: 18px;
             line-height: 30px;
             font-weight: 500;
+            @include tablet() {
+              font-size: 16px;
+            }
           }
         }
       }

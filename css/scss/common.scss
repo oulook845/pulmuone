@@ -1,3 +1,9 @@
+@import "./_breakpoint";
+/* 
+  @include tablet(): 958px;
+  @include mobile(): 596px;
+*/
+
 /* body */
 body {
   width: 100%;
@@ -15,6 +21,9 @@ body {
   z-index: 99999;
   color: var(--fontWhite);
   transition: 0.5s;
+  @include tablet(){
+    height: 60px;
+  }
   &::after {
     content: "";
     display: block;
@@ -47,8 +56,16 @@ body {
     background-image: url(../images/common/logo.png);
     background-repeat: no-repeat;
     background-position: center center;
+    @include tablet(){
+      width: 54px;
+      height: 35px;
+      background-size: contain;
+    }
   }
   nav {
+    @include tablet() {
+      display: none;
+    }
     ul#gnb {
       display: flex;
       position: relative;
@@ -132,6 +149,11 @@ body {
     position: absolute;
     right: 25px;
     top: auto;
+    div{
+      @include tablet(){
+        display: none;
+      }
+    }
     #util_profil a {
       display: inline-block;
       width: 36px;
@@ -163,7 +185,7 @@ body {
       width: 100%;
       color: var(--fontBlack_222);
       background-color: #fff;
-      padding:120px 0;
+      padding: 120px 0;
       position: absolute;
       left: 0;
       top: 0;
@@ -182,15 +204,15 @@ body {
             padding-bottom: 40px;
           }
           ul.subMenu {
-            li{
+            li {
               padding: 8px 0;
-              a{
+              a {
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 30px;
                 color: var(--fontBlack_666);
                 transition: 0.2s;
-                &:hover{
+                &:hover {
                   color: var(--mainColor_blue);
                 }
               }
@@ -199,14 +221,14 @@ body {
         }
       }
     }
-    button.closeBtn{
+    button.closeBtn {
       width: 50px;
       height: 50px;
       background: url(../images/common/btn_close_allmenu.png) no-repeat center;
       cursor: pointer;
       position: absolute;
       right: 23px;
-      top:20px;
+      top: 20px;
       z-index: 9;
     }
   }
@@ -219,20 +241,34 @@ body {
   .inner {
     max-width: 1272px;
     margin: 0 auto;
+    padding: 20px 0;
   }
   .contact_area {
     width: 100%;
     height: 150px;
     color: var(--fontWhite);
     background-color: rgba(80, 164, 229, 0.85);
+    @include tablet() {
+      height: auto;
+    }
     .inner {
       display: flex;
+      @include tablet() {
+        max-width: 412px;
+        flex-direction: column;
+      }
       div.article {
         flex: 1;
         padding-top: 33px;
         position: relative;
+        @include tablet() {
+          padding: 16px 0;
+        }
         &:not(:first-child) {
           padding-left: 143px;
+          @include tablet() {
+            padding-left: 0;
+          }
           &::before {
             content: "";
             display: block;
@@ -243,27 +279,55 @@ body {
             left: 0;
             top: 50%;
             margin-top: -42px;
+            @include tablet() {
+              width: 100%;
+              height: 0.5px;
+              margin: 0;
+              top: 0;
+            }
           }
         }
         dl {
+          @include tablet() {
+            display: flex;
+          }
           dt {
+            width: fit-content;
             font-size: 18px;
             font-weight: 500;
             line-height: 30px;
+            word-break: keep-all;
+            @include tablet() {
+              font-size: 16px;
+              text-align: right;
+            }
             span {
               font-size: 16px;
               font-weight: 400;
               margin-left: 10px;
+              text-wrap: nowrap;
+
+              @include tablet() {
+                font-size: 14px;
+              }
             }
           }
           dd {
             display: flex;
             gap: 10px;
+            @include tablet() {
+              flex-direction: column;
+              padding-left: 45px;
+            }
             b.number {
               width: 262px;
               font-size: 44px;
               line-height: 54px;
               letter-spacing: -2.2px;
+              @include tablet() {
+                font-size: 30px;
+                line-height: 1;
+              }
             }
             p {
               font-size: 14px;
@@ -271,6 +335,10 @@ body {
               letter-spacing: -0.7px;
               padding-top: 4px;
               line-height: 24px;
+              @include tablet() {
+                font-size: 12px;
+                padding: 0;
+              }
             }
           }
         }
@@ -282,17 +350,27 @@ body {
     .inner {
       height: 100%;
       padding-top: 46px;
+      @include tablet() {
+        max-width: 412px;
+      }
       .familySite {
         text-indent: 20px;
         position: absolute;
         right: 0;
         top: 46px;
         z-index: 999;
+        @include tablet() {
+          position: relative;
+          top: 0;
+        }
         &.fmHidden {
           a.fmTitle {
             border-radius: 0;
             border: 0;
             border-bottom: 1px solid #e6e6e6;
+            @include tablet() {
+              width: 100%;
+            }
           }
           .fmList_wrap {
             height: 0;
@@ -353,6 +431,9 @@ body {
         width: 96px;
         height: 52px;
         background: url(../images/common/foot_logo.png) no-repeat center;
+        @include tablet() {
+          display: none;
+        }
       }
       .f_nav {
         display: inline-block;
@@ -363,6 +444,10 @@ body {
           align-items: center;
           margin-left: 28px;
           li {
+            @include tablet() {
+              font-size: 14px;
+              text-wrap: nowrap;
+            }
             &.privacy {
               font-weight: 700;
             }
@@ -382,6 +467,10 @@ body {
       .address {
         width: 600px;
         margin-top: 26px;
+        @include tablet() {
+          width: 100%;
+          text-align: center;
+        }
         &::after {
           content: "";
           display: block;
@@ -394,6 +483,16 @@ body {
           line-height: 24px;
           letter-spacing: -0.7px;
           //   margin: 3px 0;
+          @include tablet() {
+            display: block;
+            float: none;
+          }
+          &:nth-child(1),
+          &:nth-child(2) {
+            @include tablet() {
+              display: inline-block;
+            }
+          }
           &:nth-child(1)::before,
           &:nth-child(4)::before {
             display: none;
@@ -414,6 +513,9 @@ body {
         font-size: 14px;
         line-height: 21px;
         letter-spacing: -0.7px;
+        @include tablet() {
+          text-align: center;
+        }
       }
     }
   }
@@ -421,7 +523,16 @@ body {
     position: absolute;
     right: 0;
     bottom: 73px;
+    @include tablet() {
+      margin-top: 20px;
+      position: relative;
+      bottom: auto;
+    }
     ul {
+      @include tablet() {
+        display: flex;
+        justify-content: center;
+      }
       &::after {
         content: "";
         display: block;
@@ -433,6 +544,11 @@ body {
         height: 56px;
         border-radius: 50%;
         background-color: rgba(178, 178, 178, 0.6);
+        @include tablet() {
+          float: none;
+          width: 40px;
+          height: 40px;
+        }
         &:not(:first-child) {
           margin-left: 16px;
         }
@@ -442,6 +558,7 @@ body {
           height: 100%;
           background-repeat: no-repeat;
           background-position: center;
+          background-size: 50%;
           &.insta {
             background-image: url(../images/common/icon_sns_insta.png);
           }
