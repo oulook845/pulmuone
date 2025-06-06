@@ -195,13 +195,49 @@ body {
   left: 0;
   top: 0;
 }
+@media (max-width: 958px) {
+  #header .allMenu_area .allMenu_wrap {
+    width: 100vw;
+    height: 100vh;
+  }
+}
 #header .allMenu_area .allMenu_wrap ul.allMenu_list {
   display: flex;
   width: fit-content;
   margin: 0 auto;
 }
+@media (max-width: 958px) {
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
 #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu {
   width: 212px;
+  position: relative;
+}
+@media (max-width: 958px) {
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu {
+    width: 100%;
+    border-bottom: #f0f0f0 1px solid;
+  }
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu.on {
+    color: #50a4e5;
+  }
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu.on ul.subMenu {
+    display: flex;
+  }
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../../images/common/m_arr_nav.png) no-repeat center/cover;
+    position: absolute;
+    right: 0;
+    top: 25px;
+  }
 }
 #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu > a {
   display: inline-block;
@@ -211,15 +247,36 @@ body {
   letter-spacing: -1.4px;
   padding-bottom: 40px;
 }
-#header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu li {
-  padding: 8px 0;
+@media (max-width: 958px) {
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu > a {
+    padding: 20px 0;
+    font-size: 24px;
+  }
+}
+@media (max-width: 958px) {
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu {
+    display: none;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 958px) {
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu li {
+    width: 50%;
+  }
 }
 #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu li a {
+  display: inline-block;
   font-size: 18px;
   font-weight: 500;
   line-height: 30px;
   color: var(--fontBlack_666);
+  padding: 8px 0;
   transition: 0.2s;
+}
+@media (max-width: 958px) {
+  #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu li a {
+    padding: 10px;
+  }
 }
 #header .allMenu_area .allMenu_wrap ul.allMenu_list li.mainMenu ul.subMenu li a:hover {
   color: var(--mainColor_blue);

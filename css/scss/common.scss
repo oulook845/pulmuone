@@ -21,7 +21,7 @@ body {
   z-index: 99999;
   color: var(--fontWhite);
   transition: 0.5s;
-  @include tablet(){
+  @include tablet() {
     height: 60px;
   }
   &::after {
@@ -56,7 +56,7 @@ body {
     background-image: url(../images/common/logo.png);
     background-repeat: no-repeat;
     background-position: center center;
-    @include tablet(){
+    @include tablet() {
       width: 54px;
       height: 35px;
       background-size: contain;
@@ -149,8 +149,8 @@ body {
     position: absolute;
     right: 25px;
     top: auto;
-    div{
-      @include tablet(){
+    div {
+      @include tablet() {
         display: none;
       }
     }
@@ -189,12 +189,42 @@ body {
       position: absolute;
       left: 0;
       top: 0;
+      @include tablet() {
+        width: 100vw;
+        height: 100vh;
+      }
       ul.allMenu_list {
         display: flex;
         width: fit-content;
         margin: 0 auto;
+        @include tablet() {
+          width: 100%;
+          flex-direction: column;
+          padding: 0 20px;
+        }
         li.mainMenu {
           width: 212px;
+          position: relative;
+          @include tablet() {
+            width: 100%;
+            border-bottom: #f0f0f0 1px solid;
+            &.on {
+              color: #50a4e5;
+              ul.subMenu {
+                display: flex;
+              }
+            }
+            &::after {
+              content: "";
+              display: block;
+              width: 24px;
+              height: 24px;
+              background: url(../../images/common/m_arr_nav.png) no-repeat center / cover;
+              position: absolute;
+              right: 0;
+              top: 25px;
+            }
+          }
           > a {
             display: inline-block;
             font-size: 28px;
@@ -202,16 +232,31 @@ body {
             line-height: 38px;
             letter-spacing: -1.4px;
             padding-bottom: 40px;
+            @include tablet() {
+              padding: 20px 0;
+              font-size: 24px;
+            }
           }
           ul.subMenu {
+            @include tablet() {
+              display: none;
+              flex-wrap: wrap;
+            }
             li {
-              padding: 8px 0;
+              @include tablet() {
+                width: 50%;
+              }
               a {
+                display: inline-block;
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 30px;
                 color: var(--fontBlack_666);
+                padding: 8px 0;
                 transition: 0.2s;
+                @include tablet() {
+                  padding: 10px;
+                }
                 &:hover {
                   color: var(--mainColor_blue);
                 }

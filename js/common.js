@@ -23,8 +23,11 @@ topButtonElem.addEventListener("click", function () {
 const headerElem = document.getElementById("header"),
   header_allMenu = document.getElementById("allMenu"),
   header_allMenu_area = headerElem.querySelector(".allMenu_area"),
-  header_allMenu_closeBtn = headerElem.querySelector(".closeBtn");
+  header_allMenu_closeBtn = headerElem.querySelector(".closeBtn"),
+  m_allMenuElem = headerElem.querySelector(".allMenu_list"),
+  m_allMenuList = m_allMenuElem.querySelectorAll("li");
 
+// header 전체메뉴
 header_allMenu.addEventListener("click", function () {
   header_allMenu_area.style.display = "block";
   html.style.overflow = "hidden";
@@ -32,6 +35,14 @@ header_allMenu.addEventListener("click", function () {
 header_allMenu_closeBtn.addEventListener("click", function () {
   header_allMenu_area.style.display = "none";
   html.style.overflow = "auto";
+});
+m_allMenuList.forEach((list) => {
+  list.addEventListener("click", function () {
+    m_allMenuList.forEach((list) => {
+      list.classList.remove("on");
+    });
+    this.classList.add("on");
+  });
 });
 
 /* footer 스크립트 ################## */
