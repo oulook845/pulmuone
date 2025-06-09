@@ -518,6 +518,11 @@
     height: 695px;
   }
 }
+@media (max-width: 596px) {
+  #main #con3 .inner .slide_area {
+    height: 425px;
+  }
+}
 #main #con3 .inner .slide_area ul.slide_list {
   display: flex;
   gap: 24px;
@@ -604,6 +609,26 @@
   font-weight: 500;
   line-height: 48px;
   margin-left: 14px;
+}
+#main #con3 .inner .slide_area .btnWrap {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+#main #con3 .inner .slide_area .btnWrap .navigation {
+  width: 40px;
+  height: 40px;
+  border: #50a4e5 1px solid;
+  border-radius: 50%;
+  background: url(../../images/common/icon_slick_nav.png) no-repeat center/18px;
+  cursor: pointer;
+}
+#main #con3 .inner .slide_area .btnWrap .navigation.left_btn {
+  transform: rotate(180deg);
 }
 #main #con4 {
   width: 100%;

@@ -120,24 +120,58 @@ function currentScroll() {
 currentScroll();
 
 /* con3 슬라이드 이벤트 */
-function con3Slide() {
+function con3Slide(idx) {
   // 변화된 요소를 업데이트 해야 해서 함수 내부에 선언
   const con3SlideElem = con3Elem.querySelector(".slide_list");
   const con3SlideLists = con3SlideElem.querySelectorAll("li");
-  const firstList = con3SlideLists[0].cloneNode(true);
-  let con3SlideWidth = con3SlideLists[0].offsetWidth;
-  console.log(con3SlideWidth);
+  const firstList = con3SlideLists[idx].cloneNode(true);
+  let con3SlideWidth = con3SlideLists[idx].offsetWidth;
 
-  con3SlideElem.appendChild(firstList);
+  con3SlideElem.append(firstList);
   con3SlideElem.style.transition = "margin-left 1s";
   con3SlideElem.style.marginLeft = `-${con3SlideWidth}px`;
   setTimeout(function () {
-    con3SlideLists[0].remove();
+    con3SlideLists[idx].remove();
     con3SlideElem.style.transition = "0s";
     con3SlideElem.style.marginLeft = "0px";
   }, 1000);
 }
-let con3_intervalId = setInterval(con3Slide, 4000); //첫번째 슬라이드를 복사후 없애고 전체 슬라이드 마지막에 만들기
+let con3_intervalId = setInterval(con3Slide(0), 4000); //첫번째 슬라이드를 복사후 없애고 전체 슬라이드 마지막에 만들기
+
+function con3Slide_prev(idx) {
+  // 변화된 요소를 업데이트 해야 해서 함수 내부에 선언
+  const con3SlideElem = con3Elem.querySelector(".slide_list");
+  const con3SlideLists = con3SlideElem.querySelectorAll("li");
+  const con3SlideLength = con3SlideLists.length;
+  const lastList = con3SlideLists[con3SlideLength - 1];
+  let con3SlideWidth = con3SlideLists[0].offsetWidth;
+
+  con3SlideElem.prepend(lastList);
+  con3SlideElem.style.transition = "0s";
+  con3SlideElem.style.marginLeft = `-${con3SlideWidth}px`;
+  setTimeout(function () {
+    // con3SlideLists[0].remove();
+    con3SlideElem.style.transition = "margin-left 1s";
+    con3SlideElem.style.marginLeft = "0px";
+  }, 100);
+}
+
+// con3 슬라이드 버튼 이벤트
+const con3_slideBtnWrap = con3Elem.querySelector(".btnWrap"),
+  con3_slideBtn = con3_slideBtnWrap.querySelectorAll(".navigation");
+con3_slideBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    let clickBtn = this.getAttribute("data-btn");
+    console.log(clickBtn)
+    clearInterval(con3_intervalId);
+    if(clickBtn == "next"){
+      con3Slide(0);
+    }else{
+      con3Slide_prev();
+    }
+    con3_intervalId = setInterval(con3Slide(0), 4000);
+  });
+});
 
 /* 미디어 크기 변경시 이벤트 */
 window.addEventListener("resize", function () {
