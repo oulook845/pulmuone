@@ -1,10 +1,3 @@
-/* 959px ~ */
-/* ~ 958px */
-/* ~ 596px */
-/* 
-  @include tablet(): 958px;
-  @include mobile(): 596px;
-*/
 #main #visual {
   width: 100%;
   height: 100vh;
@@ -26,6 +19,7 @@
 #main #visual .video_bg video.visual_video {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 #main #visual .img_bg {
@@ -133,6 +127,7 @@
   color: var(--fontBlack_555);
 }
 #main #con1 .content .product_01 button.moreBtn {
+  width: -moz-fit-content;
   width: fit-content;
 }
 #main #con1 .content .product_02 {
@@ -205,6 +200,7 @@
 }
 @media (max-width: 958px) {
   #main #con1 .content .product_02 .txtBox {
+    width: -moz-fit-content;
     width: fit-content;
     text-align: left;
     margin: 0 auto;
@@ -300,6 +296,7 @@
 }
 @media (max-width: 958px) {
   #main #con2 .inner div.txt_area {
+    width: -moz-fit-content;
     width: fit-content;
     height: auto;
     padding-top: 130px;
@@ -335,6 +332,7 @@
 }
 @media (max-width: 958px) {
   #main #con2 .inner ul.img_area {
+    width: -moz-fit-content;
     width: fit-content;
     flex-direction: column;
     padding-top: calc(32.5vh + 80px);
@@ -392,6 +390,7 @@
 #main #con2 .inner ul.img_area li .imgBox img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
   left: 50%;
@@ -566,6 +565,7 @@
   #main #con3 .inner .slide_area ul.slide_list li figure .content img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 }
@@ -573,7 +573,8 @@
   width: 100%;
   height: 100%;
   padding: 136px 50px 0;
-  background: var(--bgColor_gray_f5) url(../images/index/bg_review_list.png) no-repeat 52px 74px/42px 30px;
+  background: var(--bgColor_gray_f5) url(../images/index/bg_review_list.png)
+    no-repeat 52px 74px/42px 30px;
   position: absolute;
   left: 0;
   top: 0;
@@ -725,4 +726,4 @@
   #main #con4 .inner ul.csList li span {
     font-size: 16px;
   }
-}
+} /*# sourceMappingURL=index.css.map */
