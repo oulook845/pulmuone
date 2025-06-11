@@ -629,7 +629,7 @@
   height: 40px;
   border: #50a4e5 1px solid;
   border-radius: 50%;
-  background: url(../../images/common/icon_slick_nav.png) no-repeat center/18px;
+  background: url(../images/common/icon_slick_nav.png) no-repeat center/18px;
   cursor: pointer;
 }
 #main #con3 .inner .slide_area .btnWrap .navigation.left_btn {
